@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:todo_app/constants/app_color_path.dart';
 import 'package:todo_app/screens/login_screen.dart';
-import 'package:todo_app/utils/colors.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
@@ -91,7 +91,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
                               borderSide:
-                                  const BorderSide(color: AppColors.primary),
+                                  const BorderSide(color: AppColorPath.white),
                             ),
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 16),
@@ -115,7 +115,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
                               borderSide:
-                                  const BorderSide(color: AppColors.primary),
+                                  const BorderSide(color: AppColorPath.white),
                             ),
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 16),
@@ -140,7 +140,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
                               borderSide:
-                                  const BorderSide(color: AppColors.primary),
+                                  const BorderSide(color: AppColorPath.white),
                             ),
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 16),
@@ -165,7 +165,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
                               borderSide:
-                                  const BorderSide(color: AppColors.primary),
+                                  const BorderSide(color: AppColorPath.white),
                             ),
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 16),
@@ -175,7 +175,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                         ElevatedButton(
                           onPressed: () {},
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primary,
+                            backgroundColor: AppColorPath.white,
                             minimumSize: const Size(double.infinity, 55),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5),
@@ -213,7 +213,7 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
                               child: const Text(
                                 'Sign In',
                                 style: TextStyle(
-                                  color: AppColors.primary,
+                                  color: AppColorPath.white,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Poppins',
                                 ),

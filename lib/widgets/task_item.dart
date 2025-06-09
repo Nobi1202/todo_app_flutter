@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo_app/utils/colors.dart';
+import 'package:todo_app/constants/app_color_path.dart';
 import 'package:todo_app/models/task.dart';
 
 class TaskItem extends StatelessWidget {
@@ -24,11 +24,11 @@ class TaskItem extends StatelessWidget {
               width: 24,
               height: 24,
               decoration: BoxDecoration(
-                color: task.isCompleted ? AppColors.primary : Colors.white,
+                color: task.isCompleted ? AppColorPath.white : Colors.black,
                 borderRadius: BorderRadius.circular(4),
                 border: Border.all(
                   color: task.isCompleted
-                      ? AppColors.primary
+                      ? AppColorPath.white
                       : Colors.grey.shade300,
                   width: 2,
                 ),

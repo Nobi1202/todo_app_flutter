@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:todo_app/utils/colors.dart';
+import 'package:todo_app/constants/app_color_path.dart';
 import 'package:todo_app/widgets/task_item.dart';
 import 'package:todo_app/models/task.dart';
 
@@ -84,7 +84,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
               padding: const EdgeInsets.all(20),
               width: double.infinity,
               decoration: const BoxDecoration(
-                color: AppColors.primary,
+                color: AppColorPath.white,
                 borderRadius: BorderRadius.only(
                   bottomLeft: Radius.circular(0),
                   bottomRight: Radius.circular(0),
@@ -175,7 +175,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                         IconButton(
                           icon: const Icon(
                             Icons.add_circle_outline,
-                            color: AppColors.primary,
+                            color: AppColorPath.white,
                             size: 30,
                           ),
                           onPressed: _addTask,

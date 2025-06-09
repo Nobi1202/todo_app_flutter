@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:todo_app/constants/app_color_path.dart';
 import 'package:todo_app/screens/registration_screen.dart';
 import 'package:todo_app/screens/dashboard_screen.dart';
-import 'package:todo_app/utils/colors.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -83,7 +83,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
                               borderSide:
-                                  const BorderSide(color: AppColors.primary),
+                                  const BorderSide(color: AppColorPath.black),
                             ),
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 16),
@@ -108,7 +108,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             focusedBorder: OutlineInputBorder(
                               borderRadius: BorderRadius.circular(30),
                               borderSide:
-                                  const BorderSide(color: AppColors.primary),
+                                  const BorderSide(color: AppColorPath.black),
                             ),
                             contentPadding: const EdgeInsets.symmetric(
                                 horizontal: 20, vertical: 16),
@@ -122,7 +122,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             child: const Text(
                               'Forgot Password',
                               style: TextStyle(
-                                color: AppColors.primary,
+                                color: AppColorPath.white,
                                 fontFamily: 'Poppins',
                               ),
                             ),
@@ -139,7 +139,7 @@ class _LoginScreenState extends State<LoginScreen> {
                             );
                           },
                           style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColors.primary,
+                            backgroundColor: AppColorPath.white,
                             minimumSize: const Size(double.infinity, 55),
                             shape: RoundedRectangleBorder(
                               borderRadius: BorderRadius.circular(5),
@@ -177,7 +177,7 @@ class _LoginScreenState extends State<LoginScreen> {
                               child: const Text(
                                 'Sign Up',
                                 style: TextStyle(
-                                  color: AppColors.primary,
+                                  color: AppColorPath.white,
                                   fontWeight: FontWeight.bold,
                                   fontFamily: 'Poppins',
                                 ),
