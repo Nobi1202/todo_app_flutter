@@ -3,6 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:todo_app/components/app_button.dart';
 import 'package:todo_app/constants/app_image_path.dart';
 import 'package:todo_app/screens/registration_screen.dart';
+import 'package:todo_app/screens/widgets/blue_circle_img_appbar_widget.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({super.key});
@@ -28,13 +29,9 @@ class SplashScreen extends StatelessWidget {
   }
 
   Row _buildBlueCicleImgWidget() {
-    return Row(
+    return const Row(
       children: [
-        SvgPicture.asset(
-          AppImagePath.blueCircleImg,
-          height: 200,
-          width: 200,
-        )
+        BlueCircleImgAppbarWidget(),
       ],
     );
   }

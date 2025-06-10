@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:todo_app/components/app_button.dart';
+import 'package:todo_app/components/app_text_field.dart';
 import 'package:todo_app/constants/app_color_path.dart';
+import 'package:todo_app/screens/dashboard_screen.dart';
 import 'package:todo_app/screens/login_screen.dart';
+import 'package:todo_app/screens/widgets/blue_circle_img_appbar_widget.dart';
 
 class RegistrationScreen extends StatefulWidget {
   const RegistrationScreen({super.key});
@@ -29,207 +32,129 @@ class _RegistrationScreenState extends State<RegistrationScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      body: SafeArea(
-        child: SingleChildScrollView(
-          child: Column(
-            children: [
-              Stack(
-                children: [
-                  Positioned(
-                    top: 0,
-                    left: 0,
-                    child: SvgPicture.asset(
-                      'assets/images/blue_circle_img.svg',
-                      height: 200,
-                      width: 200,
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(
-                        horizontal: 20.0, vertical: 40.0),
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        const SizedBox(height: 60),
-                        const Center(
-                          child: Text(
-                            'Welcome Onboard!',
-                            style: TextStyle(
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 10),
-                        const Center(
-                          child: Text(
-                            "Let's help you meet up your tasks",
-                            style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.grey,
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 40),
-                        TextField(
-                          controller: _nameController,
-                          decoration: InputDecoration(
-                            hintText: 'Enter your full name',
-                            filled: true,
-                            fillColor: Colors.white,
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide.none,
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide.none,
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide:
-                                  const BorderSide(color: AppColorPath.white),
-                            ),
-                            contentPadding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 16),
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        TextField(
-                          controller: _emailController,
-                          decoration: InputDecoration(
-                            hintText: 'Enter your email',
-                            filled: true,
-                            fillColor: Colors.white,
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide.none,
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide.none,
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide:
-                                  const BorderSide(color: AppColorPath.white),
-                            ),
-                            contentPadding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 16),
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        TextField(
-                          controller: _passwordController,
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            hintText: 'Enter password',
-                            filled: true,
-                            fillColor: Colors.white,
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide.none,
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide.none,
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide:
-                                  const BorderSide(color: AppColorPath.white),
-                            ),
-                            contentPadding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 16),
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        TextField(
-                          controller: _confirmPasswordController,
-                          obscureText: true,
-                          decoration: InputDecoration(
-                            hintText: 'Confirm Password',
-                            filled: true,
-                            fillColor: Colors.white,
-                            border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide.none,
-                            ),
-                            enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide.none,
-                            ),
-                            focusedBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide:
-                                  const BorderSide(color: AppColorPath.white),
-                            ),
-                            contentPadding: const EdgeInsets.symmetric(
-                                horizontal: 20, vertical: 16),
-                          ),
-                        ),
-                        const SizedBox(height: 40),
-                        ElevatedButton(
-                          onPressed: () {},
-                          style: ElevatedButton.styleFrom(
-                            backgroundColor: AppColorPath.white,
-                            minimumSize: const Size(double.infinity, 55),
-                            shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(5),
-                            ),
-                          ),
-                          child: const Text(
-                            'Register',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: 'Poppins',
-                            ),
-                          ),
-                        ),
-                        const SizedBox(height: 20),
-                        Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: [
-                            const Text(
-                              "Already have an account ? ",
-                              style: TextStyle(
-                                fontFamily: 'Poppins',
-                              ),
-                            ),
-                            GestureDetector(
-                              onTap: () {
-                                Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) =>
-                                          const LoginScreen()),
-                                );
-                              },
-                              child: const Text(
-                                'Sign In',
-                                style: TextStyle(
-                                  color: AppColorPath.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Poppins',
-                                ),
-                              ),
-                            ),
-                          ],
-                        ),
-                      ],
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
+      backgroundColor: AppColorPath.lightWhite,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            _buildBlueCircleImgWidget(),
+            const SizedBox(height: 60),
+            _buildWelcomeTextWidget(),
+            const SizedBox(height: 20),
+            _buildWelcomeDescriptionTextWidget(),
+            ..._buildListTextFieldWidget(),
+            const SizedBox(height: 20),
+            _buildRegisterButtonWidget(),
+            const SizedBox(height: 20),
+            _buildSignInTextWidget(),
+          ],
         ),
       ),
+    );
+  }
+
+  Row _buildBlueCircleImgWidget() {
+    return const Row(
+      children: [
+        BlueCircleImgAppbarWidget(),
+      ],
+    );
+  }
+
+  Padding _buildWelcomeTextWidget() {
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16),
+      child: Text(
+        'Welcome Onboard!',
+        style: TextStyle(
+            fontSize: 24, fontFamily: 'PopPins', fontWeight: FontWeight.bold),
+      ),
+    );
+  }
+
+  Padding _buildWelcomeDescriptionTextWidget() {
+    return const Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16),
+      child: Text(
+        'Let’s help you meet up your tasks',
+        style: TextStyle(
+            fontSize: 14, fontFamily: 'PopPins', fontWeight: FontWeight.normal),
+      ),
+    );
+  }
+
+  List<Widget> _buildListTextFieldWidget() {
+    return [
+      Padding(
+        padding: const EdgeInsets.fromLTRB(24, 60, 24, 20),
+        child: AppTextField(
+            textEditingController: _nameController,
+            hintText: 'Enter your full name'),
+      ),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(24, 0, 24, 20),
+        child: AppTextField(
+            textEditingController: _emailController,
+            hintText: 'Enter your email'),
+      ),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(24, 0, 24, 20),
+        child: AppTextField(
+            textEditingController: _passwordController,
+            hintText: 'Enter password'),
+      ),
+      Padding(
+        padding: const EdgeInsets.fromLTRB(24, 0, 24, 20),
+        child: AppTextField(
+            textEditingController: _confirmPasswordController,
+            hintText: 'Confirm Password'),
+      ),
+    ];
+  }
+
+  Padding _buildRegisterButtonWidget() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 24),
+      child: AppButton(
+        onPressed: () => Navigator.push(
+          context,
+          MaterialPageRoute(
+            builder: (context) => const LoginScreen(),
+          ),
+        ),
+        title: 'Register',
+      ),
+    );
+  }
+
+  Row _buildSignInTextWidget() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        const Text(
+          'Already have an account ? ',
+          style: TextStyle(
+            fontFamily: 'PopPins',
+            fontWeight: FontWeight.normal,
+            fontSize: 14,
+          ),
+        ),
+        InkWell(
+          onTap: () => Navigator.push(
+            context,
+            MaterialPageRoute(
+              builder: (context) => const DashboardScreen(),
+            ),
+          ),
+          child: const Text(
+            'Sign In',
+            style: TextStyle(
+                fontFamily: 'PopPins',
+                fontWeight: FontWeight.normal,
+                fontSize: 14,
+                color: AppColorPath.lightBlue),
+          ),
+        )
+      ],
     );
   }
 }
